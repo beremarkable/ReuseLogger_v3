@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/logging_screen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/txt_logging_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Trip Logging Active"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Real-Time Preview -->
+        <TextView
+            android:id="@+id/txt_simulated_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Data Points Collected: 0"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_temperature_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temperature Data"
+            android:textSize="16sp"
+            android:layout_below="@id/txt_simulated_data"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txt_shock_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shock Data"
+            android:textSize="16sp"
+            android:layout_below="@id/txt_temperature_data"
+            android:layout_marginTop="8dp" />
+
+        <!-- Notes Section -->
+        <Button
+            android:id="@+id/btn_add_note"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Note"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/dark_grey"/>
+
+        <Button
+            android:id="@+id/btn_view_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Notes"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/dark_grey"/>
+
+        <!-- End Trip Button -->
+        <Button
+            android:id="@+id/btn_end_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="End Trip"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/dark_grey"/>
+
+    </LinearLayout>
+</ScrollView>

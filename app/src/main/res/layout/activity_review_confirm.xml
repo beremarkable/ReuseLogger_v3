@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/review_confirm_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"> <!-- Moved padding inside the container -->
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/header_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Review Trip Parameters"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal" />
+
+            <!-- GPS Module Summary -->
+            <TextView
+                android:id="@+id/gps_summary_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS Module"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/label_gps_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:" />
+
+            <TextView
+                android:id="@+id/txt_gps_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enabled"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/label_gps_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Interval:" />
+
+            <TextView
+                android:id="@+id/txt_gps_interval"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Every 10 minutes"
+                android:textStyle="italic" />
+
+            <!-- Temperature Module Summary -->
+            <TextView
+                android:id="@+id/temperature_summary_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature Module"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/label_temperature_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:" />
+
+            <TextView
+                android:id="@+id/txt_temperature_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enabled"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/label_temperature_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setting:" />
+
+            <TextView
+                android:id="@+id/txt_temperature_setting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medium"
+                android:textStyle="italic" />
+
+            <!-- Shock Module Summary -->
+            <TextView
+                android:id="@+id/shock_summary_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shock Module"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="24dp" />
+
+            <TextView
+                android:id="@+id/label_shock_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status:" />
+
+            <TextView
+                android:id="@+id/txt_shock_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enabled"
+                android:textStyle="italic" />
+
+            <!-- Start Logging Button -->
+            <Button
+                android:id="@+id/btn_start_logging"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start Logging"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/dark_grey"/>
+
+            <!-- Back Button -->
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/dark_grey"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/white"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="0dp" />
+</RelativeLayout>

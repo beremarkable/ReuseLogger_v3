@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:id="@+id/parameters_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation">
+
+        <LinearLayout
+            android:id="@+id/parameters_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"> <!-- Moved padding inside the container -->
+
+            <!-- GPS Module Settings -->
+            <TextView
+                android:id="@+id/gps_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS Settings"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Switch
+                android:id="@+id/switch_gps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:minHeight="48dp"
+                android:text="Enable GPS" />
+
+            <TextView
+                android:id="@+id/gps_interval_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS Interval"
+                android:layout_marginTop="8dp" />
+
+            <Spinner
+                android:id="@+id/spinner_gps_interval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:minHeight="48dp" />
+
+            <!-- Temperature Settings -->
+            <TextView
+                android:id="@+id/temperature_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature Settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <Switch
+                android:id="@+id/switch_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:minHeight="48dp"
+                android:text="Enable Temperature" />
+
+            <TextView
+                android:id="@+id/temperature_setting_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature Setting"
+                android:layout_marginTop="8dp" />
+
+            <Spinner
+                android:id="@+id/spinner_temperature_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:minHeight="48dp" />
+
+            <!-- Add Shock Settings -->
+            <TextView
+                android:id="@+id/shock_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shock Settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp" />
+
+            <Switch
+                android:id="@+id/switch_shock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:checked="true"
+                android:minHeight="48dp"
+                android:text="Enable Shock Monitoring" />
+
+            <!-- Reset Defaults Button -->
+            <Button
+                android:id="@+id/btn_reset_defaults"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reset to Defaults"
+                android:layout_marginTop="24dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/dark_grey"/>
+
+            <!-- Next Button -->
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Next"
+                android:layout_marginTop="16dp"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/dark_grey"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/white"
+        android:background="?attr/colorPrimary"
+        android:layout_marginBottom="0dp" />
+</RelativeLayout>

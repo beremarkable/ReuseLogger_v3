@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/trip_details_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation"> <!-- Adjusting layout to be above the navigation bar -->
+
+        <!-- Container -->
+        <LinearLayout
+            android:id="@+id/trip_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"> <!-- Moved padding inside the content container -->
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/trip_details_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip Details"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="16dp" />
+
+            <!-- Trip Name and Date -->
+            <TextView
+                android:id="@+id/trip_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip Name"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/trip_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trip Date"
+                android:layout_marginBottom="16dp" />
+
+            <!-- GPS Data -->
+            <TextView
+                android:id="@+id/gps_data_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS Data:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/gps_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS Data goes here"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Temperature Data -->
+            <TextView
+                android:id="@+id/temperature_data_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature Data:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/temperature_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature Data goes here"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Shock Data -->
+            <TextView
+                android:id="@+id/shock_data_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shock Data:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/shock_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Shock Data"
+                android:textSize="16sp"
+                android:layout_marginTop="8dp" />
+
+            <!-- Notes -->
+            <TextView
+                android:id="@+id/notes_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes:"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notes go here"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Export Button -->
+            <Button
+                android:id="@+id/btn_view_map"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/dark_grey"
+                android:text="View on Map" />
+
+            <Button
+                android:id="@+id/export_data_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Export Data"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="@color/dark_grey"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/colorPrimary"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:fitsSystemWindows="true"
+        app:menu="@menu/bottom_navigation_menu"
+        app:itemIconTint="@color/black"
+        app:itemTextColor="@color/white" />
+
+</RelativeLayout>

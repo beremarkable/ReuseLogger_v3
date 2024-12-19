@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_saved_trip_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <!-- Trip Name -->
+    <TextView
+        android:id="@+id/trip_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip Name"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Trip Date -->
+    <TextView
+        android:id="@+id/trip_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip Date"
+        android:layout_below="@id/trip_name"
+        android:layout_marginTop="4dp" />
+
+    <!-- Delete Button -->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/delete_trip_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_delete"
+        android:contentDescription="Delete Trip"
+        android:layout_alignParentEnd="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:tint="@color/black" />
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "503177776685",
+    "firebase_url": "https://reuselogger-cdf34-default-rtdb.firebaseio.com",
+    "project_id": "reuselogger-cdf34",
+    "storage_bucket": "reuselogger-cdf34.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:503177776685:android:a6318648e4e6d497d6b2a4",
+        "android_client_info": {
+          "package_name": "com.example.myloggerv03"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpeYaUC0nAdcqu5tFsFQ6TgGOv8L5lt1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

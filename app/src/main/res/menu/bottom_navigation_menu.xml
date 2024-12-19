@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/navigation_new_trip"
+        android:icon="@drawable/ic_add"
+        android:title="New Trip" />
+    <item
+        android:id="@+id/navigation_saved_trips"
+        android:icon="@drawable/ic_save"
+        android:title="Saved Trips" />
+</menu>
